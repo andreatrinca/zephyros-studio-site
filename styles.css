@@ -9,56 +9,501 @@ html {
 body {
   margin: 0;
   min-height: 100vh;
-  font-family: "Sora", sans-serif;  color: #17324a;
+  font-family: "Sora", sans-serif;
+  color: #17324a;
   background:
-    radial-gradient(circle at top left, rgba(72, 169, 226, 0.28), transparent 38%),
+    radial-gradient(
+      circle at top left,
+      rgba(72, 169, 226, 0.28),
+      transparent 38%
+    ),
     linear-gradient(135deg, #eef3f6 0%, #cbd5dc 100%);
+}
+
+.site-header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+
+  width: 100%;
+  padding: 22px 40px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.brand {
+  display: block;
+}
+
+.brand img {
+  display: block;
+  width: 230px;
+  height: auto;
+}
+
+.main-nav {
+  display: flex;
+  align-items: center;
+  gap: 34px;
+}
+
+.main-nav a {
+  position: relative;
+
+  color: #17324a;
+  font-size: 15px;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.main-nav a::after {
+  content: "";
+
+  position: absolute;
+  left: 0;
+  bottom: -7px;
+
+  width: 0;
+  height: 2px;
+
+  background: #258bc2;
+  transition: width 0.25s ease;
+}
+
+.main-nav a:hover::after {
+  width: 100%;
 }
 
 main {
   min-height: 100vh;
-  padding: 60px 24px;
+}
+
+.hero {
+  min-height: 100vh;
+  padding: 140px 24px 70px;
+
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+
   text-align: center;
 }
 
-img {
+.hero-logo {
   display: block;
-  width: min(760px, 92vw);
+  width: min(760px, 90vw);
   height: auto;
-  margin-bottom: 36px;
+  margin-bottom: 34px;
 }
 
-h1 {
-  margin: 0 0 18px;
-  font-size: clamp(42px, 7vw, 72px);
-  font-weight: 700;
-  letter-spacing: -2px;
-}
-
-p {
+.hero p {
   max-width: 760px;
-  margin: 0;
-  font-size: clamp(20px, 3vw, 28px);
-  line-height: 1.5;
+  margin: 0 0 34px;
+
   color: #38566f;
+  font-size: clamp(20px, 3vw, 28px);
   font-weight: 500;
-letter-spacing: -0.4px;
+  line-height: 1.5;
+  letter-spacing: -0.4px;
 }
 
-@media (max-width: 600px) {
-  main {
-    padding: 40px 18px;
+.primary-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 52px;
+  padding: 0 28px;
+
+  color: #ffffff;
+  background: #1f7fab;
+  border-radius: 999px;
+
+  font-size: 15px;
+  font-weight: 600;
+  text-decoration: none;
+
+  box-shadow: 0 10px 24px rgba(31, 127, 171, 0.24);
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.primary-button:hover {
+  transform: translateY(-2px);
+  background: #176b93;
+  box-shadow: 0 14px 30px rgba(31, 127, 171, 0.3);
+}
+
+.studio-section {
+  padding: 110px 24px;
+  background: #f7f9fb;
+}
+
+.section-container {
+  width: min(1120px, 100%);
+  margin: 0 auto;
+}
+
+.section-label {
+  margin: 0 0 16px;
+
+  color: #258bc2;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 1.4px;
+  text-transform: uppercase;
+}
+
+.studio-section h2 {
+  max-width: 760px;
+  margin: 0 0 24px;
+
+  color: #17324a;
+  font-size: clamp(34px, 5vw, 54px);
+  line-height: 1.15;
+  letter-spacing: -1.6px;
+}
+
+.section-intro {
+  max-width: 780px;
+  margin: 0 0 56px;
+
+  color: #526b7e;
+  font-size: 19px;
+  line-height: 1.75;
+}
+
+.studio-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.studio-card {
+  padding: 34px;
+
+  background: #ffffff;
+  border: 1px solid rgba(23, 50, 74, 0.08);
+  border-radius: 22px;
+
+  box-shadow: 0 14px 36px rgba(23, 50, 74, 0.07);
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.studio-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 44px rgba(23, 50, 74, 0.11);
+}
+
+.studio-card h3 {
+  margin: 0 0 14px;
+
+  color: #17324a;
+  font-size: 21px;
+}
+
+.studio-card p {
+  margin: 0;
+
+  color: #607789;
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+.products-section {
+  padding: 110px 24px;
+  background:
+    radial-gradient(
+      circle at bottom right,
+      rgba(72, 169, 226, 0.16),
+      transparent 34%
+    ),
+    #eaf0f4;
+}
+
+.products-section h2 {
+  max-width: 760px;
+  margin: 0 0 24px;
+
+  color: #17324a;
+  font-size: clamp(34px, 5vw, 54px);
+  line-height: 1.15;
+  letter-spacing: -1.6px;
+}
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 28px;
+}
+
+.product-card {
+  position: relative;
+  overflow: hidden;
+
+  min-height: 440px;
+  padding: 42px;
+
+  background: #ffffff;
+  border: 1px solid rgba(23, 50, 74, 0.08);
+  border-radius: 28px;
+
+  box-shadow: 0 18px 46px rgba(23, 50, 74, 0.09);
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.product-card::before {
+  content: "";
+
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 7px;
+
+  background: linear-gradient(
+    90deg,
+    #258bc2,
+    #55b4df
+  );
+}
+
+.product-card:nth-child(2)::before {
+  background: linear-gradient(
+    90deg,
+    #7f72c9,
+    #c17ec9
+  );
+}
+
+.product-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 24px 54px rgba(23, 50, 74, 0.14);
+}
+
+.product-content {
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.product-category {
+  margin: 0 0 24px;
+
+  color: #258bc2;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 1.3px;
+  text-transform: uppercase;
+}
+
+.product-card:nth-child(2) .product-category {
+  color: #8b66b3;
+}
+
+.product-card h3 {
+  margin: 0 0 10px;
+
+  color: #17324a;
+  font-size: clamp(30px, 4vw, 42px);
+  line-height: 1.1;
+  letter-spacing: -1px;
+}
+
+.product-payoff {
+  margin: 0 0 24px;
+
+  color: #38566f;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+.product-card p:not(.product-category):not(.product-payoff) {
+  margin: 0 0 32px;
+
+  color: #607789;
+  font-size: 16px;
+  line-height: 1.75;
+}
+
+.product-link {
+  margin-top: auto;
+
+  color: #1f7fab;
+  font-size: 15px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.product-link::after {
+  content: " →";
+  transition: margin-left 0.2s ease;
+}
+
+.product-link:hover::after {
+  margin-left: 5px;
+}
+
+.product-card:nth-child(2) .product-link {
+  color: #815ca9;
+}
+
+.contact-section {
+  padding: 110px 24px;
+  background: #17324a;
+}
+
+.contact-container {
+  text-align: center;
+}
+
+.contact-section .section-label {
+  color: #69bfe7;
+}
+
+.contact-section h2 {
+  max-width: 760px;
+  margin: 0 auto 24px;
+
+  color: #ffffff;
+  font-size: clamp(34px, 5vw, 54px);
+  line-height: 1.15;
+  letter-spacing: -1.6px;
+}
+
+.contact-section .section-intro {
+  max-width: 720px;
+  margin: 0 auto 38px;
+
+  color: #c3d1dc;
+}
+
+.contact-email {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 56px;
+  padding: 0 30px;
+
+  color: #17324a;
+  background: #ffffff;
+  border-radius: 999px;
+
+  font-size: clamp(16px, 2vw, 19px);
+  font-weight: 600;
+  text-decoration: none;
+
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.18);
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.contact-email:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 18px 36px rgba(0, 0, 0, 0.24);
+}
+
+.site-footer {
+  padding: 26px 24px;
+
+  color: #9fb3c3;
+  background: #102536;
+
+  font-size: 13px;
+  text-align: center;
+}
+
+.site-footer p {
+  margin: 0;
+}
+
+@media (max-width: 700px) {
+  .site-header {
+    padding: 18px 20px;
   }
 
-  img {
+  .brand img {
+    width: 170px;
+  }
+
+  .main-nav {
+    gap: 16px;
+  }
+
+  .main-nav a {
+    font-size: 13px;
+  }
+
+  .hero {
+    padding: 125px 18px 50px;
+  }
+
+  .hero-logo {
     margin-bottom: 26px;
   }
+    .studio-section {
+    padding: 80px 18px;
+  }
 
-  h1 {
-    letter-spacing: -1px;
+  .studio-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .studio-card {
+    padding: 28px;
+  }
+    .products-section {
+    padding: 80px 18px;
+  }
+
+  .products-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .product-card {
+    min-height: 0;
+    padding: 34px 28px;
+  }
+    .contact-section {
+    padding: 80px 18px;
+  }
+
+  .contact-email {
+    width: 100%;
+    padding: 0 18px;
+  }
+}
+
+@media (max-width: 500px) {
+  .site-header {
+    align-items: flex-start;
+  }
+
+  .brand img {
+    width: 145px;
+  }
+
+  .main-nav {
+    gap: 11px;
+  }
+
+  .main-nav a {
+    font-size: 12px;
   }
 }

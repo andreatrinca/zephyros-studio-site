@@ -6,17 +6,160 @@
 
   <title>Zephyros Studio</title>
 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-  <main>
-    <img
-      src="images/zephyros_logo.png"
-      alt="Logo Zephyros Studio"
-    >
+  <header class="site-header">
+    <a class="brand" href="#home">
+      <img
+        src="images/zephyros_logo.png"
+        alt="Zephyros Studio"
+      >
+    </a>
 
-    <p>Making everyday life easier.</p>
+    <nav class="main-nav" aria-label="Navigazione principale">
+      <a href="#studio">Studio</a>
+      <a href="#products">Products</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main id="home">
+    <section class="hero">
+      <img
+        class="hero-logo"
+        src="images/zephyros_logo.png"
+        alt="Zephyros Studio"
+      >
+
+      <p>Making everyday life easier.</p>
+
+      <a class="primary-button" href="#products">
+        Discover our products
+      </a>
+    </section>
+    <section id="studio" class="studio-section">
+  <div class="section-container">
+    <p class="section-label">Zephyros Studio</p>
+
+    <h2>Technology designed around real life.</h2>
+
+    <p class="section-intro">
+      We create digital products that solve practical problems,
+      simplify everyday activities and provide a clear, intuitive
+      user experience.
+    </p>
+
+    <div class="studio-grid">
+      <article class="studio-card">
+        <h3>Useful by design</h3>
+        <p>
+          Every product starts from a real need and focuses on
+          delivering tangible value.
+        </p>
+      </article>
+
+      <article class="studio-card">
+        <h3>Simple to use</h3>
+        <p>
+          Technology should reduce complexity, not add more of it.
+        </p>
+      </article>
+
+      <article class="studio-card">
+        <h3>Built with care</h3>
+        <p>
+          Thoughtful design, reliable development and attention
+          to every detail.
+        </p>
+      </article>
+    </div>
+  </div>
+</section>
+<section id="products" class="products-section">
+  <div class="section-container">
+    <p class="section-label">Our products</p>
+
+    <h2>Digital tools built for real needs.</h2>
+
+    <p class="section-intro">
+      Applications designed to simplify specific activities through
+      clear interfaces, practical features and thoughtful technology.
+    </p>
+
+    <div class="products-grid">
+      <article class="product-card">
+        <div class="product-content">
+          <p class="product-category">Live music</p>
+
+          <h3>OneTwoLive</h3>
+
+          <p class="product-payoff">
+            Your setlist, ready on stage.
+          </p>
+
+          <p>
+            A Windows-first audio player designed for musicians who need
+            a simple, reliable and stage-friendly way to manage their setlists.
+          </p>
+
+          <a href="#" class="product-link">
+            Discover OneTwoLive
+          </a>
+        </div>
+      </article>
+
+      <article class="product-card">
+        <div class="product-content">
+          <p class="product-category">Creative archive</p>
+
+          <h3>Restyle Archive</h3>
+
+          <p class="product-payoff">
+            Your visual library of restyling projects.
+          </p>
+
+          <p>
+            A visual application for collecting, organizing and preserving
+            furniture restyling ideas, techniques, materials and inspirations.
+          </p>
+
+          <a href="#" class="product-link">
+            Discover Restyle Archive
+          </a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+<section id="contact" class="contact-section">
+  <div class="section-container contact-container">
+    <p class="section-label">Contact</p>
+
+    <h2>Let’s build something useful.</h2>
+
+    <p class="section-intro">
+      For information, collaborations or product enquiries,
+      get in touch with Zephyros Studio.
+    </p>
+
+    <a
+      class="contact-email"
+      href="mailto:info@zephyros-studio.com"
+    >
+      info@zephyros-studio.com
+    </a>
+  </div>
+</section>
   </main>
+  <footer class="site-footer">
+  <p>
+    © 2026 Zephyros Studio. All rights reserved.
+  </p>
+</footer>
 </body>
 </html>
