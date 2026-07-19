@@ -407,6 +407,15 @@ main {
   margin-left: 5px;
 }
 
+.product-link-disabled {
+  cursor: default;
+  opacity: 0.65;
+}
+
+.product-link-disabled::after {
+  content: "";
+}
+
 .product-card:nth-child(2) .product-link {
   color: #815ca9;
 }
