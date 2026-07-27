@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://zephyros-studio.com/sitemap.xml
